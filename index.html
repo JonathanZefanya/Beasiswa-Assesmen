@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilihan Beasiswa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Pilihan Beasiswa</a></li>
+            <li><a href="daftar.html">Daftar</a></li>
+            <li><a href="hasil.html">Hasil</a></li>
+        </ul>
+    </nav>
+
+    <!-- Pilihan Beasiswa Section -->
+    <section id="pilihan-beasiswa">
+        <h2>Pilihan Beasiswa</h2>
+        <ul id="beasiswa-list" class="list-group mt-3">
+            <script>
+            const beasiswaList = [
+                'Beasiswa A - Prestasi Akademik',
+                'Beasiswa B - Bidikmisi',
+                'Beasiswa C - Beasiswa Penuh'
+            ];
+
+            const beasiswaUl = document.getElementById('beasiswa-list');
+            beasiswaList.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                li.classList.add('list-group-item', 'list-group-item-action', 'list-group-item-info');
+                beasiswaUl.appendChild(li);
+            });
+            </script>
+        </ul>
+    </section>
+</body>
+</html>

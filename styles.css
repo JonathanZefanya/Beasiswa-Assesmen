@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #004d99;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #004d99;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+form button {
+    background-color: #004d99;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+form button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#hasil-container {
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+/* Tombol umum */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+/* Gaya tombol next */
+#next-btn {
+    background-color: #007bff;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+/* Gaya hover untuk tombol next */
+#next-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Gaya tombol delete */
+#delete-btn {
+    background-color: #dc3545;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+/* Gaya hover untuk tombol delete */
+#delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Ikon di dalam tombol */
+button i {
+    margin-left: 8px;
+}
+
+/* Penempatan tombol di bagian kanan */
+button {
+    float: right;
+}
