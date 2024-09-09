@@ -57,7 +57,7 @@
                     </script>
                 </div>
                 <div class="mb-1">
-                    <label for="nomor_hp" class="form-label">No. Hp</label>
+                    <label for="nomor_hp" class="form-label">Nomor Hp</label>
                     <input type="text" class="form-control" name="nomor_hp" id="nomor_hp" aria-describedby="no_hp" required pattern="\d+">
                     <script>
                         const noHpInput = document.getElementById('nomor_hp');
@@ -67,7 +67,7 @@
                             if(noHp.match(noHpPattern)) {
                                 // tidak terjadi apa apa
                             } else {
-                                alert('No. Hp tidak valid');
+                                alert('Nomor Hp tidak valid');
                                 noHpInput.value = '';
                             }
                         });
@@ -99,16 +99,27 @@
                         <option value="K2">Non Akademik</option>
                         <option value="K3">Lainnya</option>
                     </select>
+                    <script>
+                        const beasiswaInput = document.getElementById('beasiswa');
+                        beasiswaInput.addEventListener('change', function() {
+                            const beasiswa = this.value;
+                            if(beasiswa == '0') {
+                                alert('Pilih Beasiswa');
+                                beasiswaInput.value = '';
+                            }
+                        });
+                    </script>
                 </div>
                 <div class="mb-3">
                     <label for="berkas" class="form-label">Upload Berkas Syarat</label>
-                    <input class="form-control" accept="application/pdf, .doc, .docx, .zip" type="file" disabled name="berkas" id="berkas">
+                    <small class="form-text text-muted">Berkas yang diperbolehkan: pdf, jpg, jpeg, zip</small>
+                    <input class="form-control" accept="application/pdf, .zip, .jpg, .jpeg" type="file" disabled name="berkas" id="berkas">
                     <script>
                         const berkasInput = document.getElementById('berkas');
                         berkasInput.addEventListener('change', function() {
                             const file = this.files[0];
                             const fileType = file.type;
-                            const validExtensions = ['application/pdf', 'image/jpeg', 'image/jpg', 'application/zip'];
+                            const validExtensions = ['application/pdf', 'image/jpeg', 'image/jpg', 'application/zip', 'application/x-zip-compressed', 'application/x-zip'];
                             if(validExtensions.includes(fileType)) {
                                // tidak terjadi apa apa
                             } else {
